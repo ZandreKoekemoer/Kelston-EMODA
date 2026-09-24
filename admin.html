@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kelston Admin Mockup</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<body class="admin-body">
+<script>if(sessionStorage.getItem("kelstonAdminLoggedIn")!=="true"){location.replace("login.html")}</script>
+<header class="admin-top"><div><a href="index.html" class="kelston-logo">KELSTON</a><span>VEHICLE ADMIN</span></div><div class="admin-nav-actions"><a href="index.html">← VIEW WEBSITE</a><button id="logoutBtn" class="logout-btn">LOG OUT</button></div></header>
+<main class="admin-wrap">
+<section class="admin-intro"><p class="eyebrow dark">DEALERSHIP MANAGEMENT</p><h1>Vehicle inventory</h1><p>Add, edit or remove vehicles shown on the mockup website. Changes are saved in this browser using local storage.</p></section>
+<section class="admin-layout">
+<form id="vehicleForm" class="admin-form">
+<h2 id="formTitle">Add vehicle</h2><input type="hidden" id="editId">
+<div class="admin-fields">
+<label>Brand<select id="brand" required><option>OMODA</option><option>JAECOO</option></select></label>
+<label>Model<input id="model" required placeholder="e.g. C7"></label>
+<label>Variant<input id="variant" required placeholder="e.g. Elegance"></label>
+<label>Year<input id="year" type="number" required value="2026"></label>
+<label>Price<input id="price" required placeholder="R589 900"></label>
+<label>Colour<input id="colour" required placeholder="Moonlight Silver"></label>
+<label>Mileage<input id="mileage" required value="0 km"></label>
+<label>Branch<select id="branch"><option>Gqeberha</option><option>Jeffreys Bay</option><option>Komani</option></select></label>
+<label class="full">Main image URL<input id="image" required placeholder="https://..."></label>
+<label>Engine<input id="engine" placeholder="1.6 TGDI"></label>
+<label>Power<input id="power" placeholder="145 kW"></label>
+<label>Torque<input id="torque" placeholder="290 Nm"></label>
+<label>Transmission<input id="transmission" placeholder="7DCT"></label>
+<label class="full">Features<textarea id="features" placeholder="Panoramic sunroof, Wireless CarPlay, 360 camera"></textarea></label>
+<label class="full">Description<textarea id="description" placeholder="Short vehicle description"></textarea></label>
+</div>
+<div class="admin-buttons"><button class="btn submit" type="submit">SAVE VEHICLE</button><button class="btn secondary" type="button" id="cancelEdit">CANCEL EDIT</button></div>
+<p id="adminMessage"></p>
+</form>
+<div class="admin-list-wrap"><div class="admin-list-head"><h2>Current vehicles</h2><button id="resetDemo" class="small-btn">RESET DEMO DATA</button></div><div id="adminList"></div></div>
+</section></main>
+<script src="data.js"></script><script src="admin.js"></script></body></html>

@@ -1,20 +1,26 @@
-# Kelston OMODA | JAECOO Mockup
+# Kelston OMODA | JAECOO V2 Mockup
 
-Premium responsive front-end mockup based on the feature set of Kelston's current OMODA/JAECOO page, with a redesigned UI.
+Open `index.html` to view the website.
+Open `admin.html` to manage the mock vehicle inventory.
 
-Open `index.html` or use VS Code Live Server.
+## New in V2
+- Larger KELSTON branding
+- Sharper/higher-resolution mockup vehicle imagery
+- Clickable vehicle cards with full detail modal
+- Vehicle specs and feature lists
+- Admin panel to add, edit and delete vehicles
+- Admin changes instantly affect the main website in the same browser
+- LocalStorage persistence for the mockup
+- Cleaner Cloudflare deployment structure: files are at the ZIP root
 
-Included:
-- OMODA/JAECOO model range
-- New vehicle cards
-- Used vehicle section
-- Specials/test-drive call-to-action
-- Service section
-- Gqeberha, Jeffreys Bay and Komani dealership information
-- Mock test-drive form
-- Responsive mobile layout
-- Mobile quick actions
-- Brand filters
-- Scroll animations
+## Important
+This is still a front-end mockup. The admin panel uses browser LocalStorage, not a real database, so changes are only saved on the browser/device where they were made. A production version would connect the admin panel to a database such as Cloudflare D1 and add proper authentication.
 
-Note: This is a mockup. Forms do not submit anywhere. Vehicle images are loaded from public online URLs for concept/demo use and should be replaced with OEM-approved assets before production.
+Vehicle images are online mockup assets. Replace them with OEM-approved media before production.
+
+## Admin mockup login
+- URL: `login.html`
+- Username: `admin`
+- Password: `Kelston2026`
+
+This login is front-end mockup protection only. Do not use these hardcoded credentials for a production website.
